@@ -5,7 +5,7 @@ A macOS command line game of Reversi written in Python. Treats the board as an 8
 - 3.6.0
 
 #### Dependencies
-- termcolor (for changing text color on
+- termcolor (for changing text color on the termial)
 - numpy
 
 May work in other \*nix environments besides macOS, but I haven't tested it in any others.
