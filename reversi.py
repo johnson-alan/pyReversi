@@ -113,7 +113,7 @@ def prepare_new_game(board):
 	board[4][3] = computer_player
 	board[4][4] = human_player
 
-	sys.stdout.write("\x1b[8;{rows};{cols}t".format(rows=45, cols=85))
+	sys.stdout.write("\x1b[8;{rows};{cols}t".format(rows=48, cols=85))
 
 	print('\n The game has begun \n Starting Postions: \n')
 	print_board(board)
@@ -195,15 +195,11 @@ def take_computer_turn(board, legal_moves):
 	# legal_moves is a tuple of white and black legal moves
 	global computer_player
 
-	print(computer_player)
-	print(legal_moves)
-	print(len(legal_moves))
 	if len(legal_moves) == 2 :
 		move = legal_moves[computer_player - 1][random.randint(0, len(legal_moves[computer_player - 1]) -1)]
 	elif len(legal_moves == 1):
 		# special case: no opponent moves list, in shape [(n,n)...] instead of [[(n,n)...], [(n,n)...]]
 		move = legal_moves[0]
-		print("IN NO MOVES SET")
 	board = update_board(board, move, computer_player)
 	return board
 
