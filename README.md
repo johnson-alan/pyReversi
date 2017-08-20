@@ -9,3 +9,6 @@ A macOS command line game of Reversi written in Python. Treats the board as an 8
 - numpy
 
 May work in other \*nix environments besides macOS, but I haven't tested it in any others.
+
+#### Demo
+![](https://github.com/allenhj/pyReversi/blob/master/reversi.gif?raw=true)
