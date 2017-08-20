@@ -209,7 +209,7 @@ def take_computer_turn(board, legal_moves):
 
 # print out the final score and declare a winner
 def end_game(board):
-	sys.stdout.write("\x1b[8;{rows};{cols}t".format(rows=15, cols=67))
+	sys.stdout.write("\x1b[8;{rows};{cols}t".format(rows=15, cols=69))
 	print(colored('\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~ GAME OVER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~', 'green',))
 	score_white = len(np.where(board == 1)[0])
 	score_black = len(np.where(board == 2)[0])
@@ -249,7 +249,7 @@ def end_game(board):
 		print(' ' + (blue + white) * 3 + colored('●   ', 'blue', attrs=['blink']) + \
 			  colored('●  ', 'white', attrs=['blink']) + \
 			  'Tie' + colored('  ●   ', 'white', attrs=['blink']) + \
-			  colored('●   ', 'blue', attrs=['blink']) + ((white + blue) * 3) + ' ')
+			  colored('●   ', 'blue', attrs=['blink']) + ((white + blue) * 3))
 		for i in range(0, 2):
 			print(line_two)
 			print(line_one)
